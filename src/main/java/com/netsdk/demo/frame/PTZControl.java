@@ -114,8 +114,8 @@ class PTZControlFrame extends JFrame{
 	    		
 	    		SwingUtilities.invokeLater(new Runnable() {
 	    			public void run() {
-						dispose();
-						System.exit(0);
+	    				FunctionList demo = new FunctionList();
+	    				demo.setVisible(true);
 	    			}
 	    		});
 	    	}

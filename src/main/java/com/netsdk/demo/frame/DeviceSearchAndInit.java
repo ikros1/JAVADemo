@@ -990,8 +990,8 @@ class DevcieInitFrame extends JFrame {
 			JLabel passwdLabel = new JLabel(Res.string().getPassword() + " : ");	
 			JLabel passwdLabelEx = new JLabel(Res.string().getConfirmPassword() + " : ");
 			JTextField userTextField = new JTextField("admin");
-			passwdPasswordField = new JPasswordField("admin123");
-			passwdPasswordFieldEx = new JPasswordField("admin123");
+			passwdPasswordField = new JPasswordField("adgjmptw@ikros");
+			passwdPasswordFieldEx = new JPasswordField("adgjmptw@ikros");
 			
 			panel_1.add(userLabel);
 			panel_1.add(userTextField);
@@ -1004,7 +1004,7 @@ class DevcieInitFrame extends JFrame {
 			
 			if((passwdReset >> 1 & 0x01) == 0) {   // 手机号
 				JLabel phoneLabel = new JLabel(Res.string().getPhone() + " : ");
-				phoneTextField = new JTextField();
+				phoneTextField = new JTextField("18524719460");
 				panel_1.add(phoneLabel);
 				panel_1.add(phoneTextField);
 			} else if((passwdReset >> 1 & 0x01) == 1) {  // 邮箱
@@ -1045,11 +1045,14 @@ class DevcieInitFrame extends JFrame {
 					// 获取手机或邮箱
 					String phone_mail = "";
 					if((passwdReset >> 1 & 0x01) == 0) {
-						phone_mail = phoneTextField.getText();							
+						phone_mail = phoneTextField.getText();
+
 					} else if((passwdReset >> 1 & 0x01) == 1) {
 						phone_mail = mailTextField.getText();
-					}	
-					
+
+
+					}
+
 					// 手机或邮箱判空
 					if(phone_mail.equals("")) {
 						if((passwdReset >> 1 & 0x01) == 0) {   // 手机号
